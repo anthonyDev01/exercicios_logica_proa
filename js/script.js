@@ -8,7 +8,7 @@ manzano.addEventListener("click", openFacat);
 
 function openFacat() {
     container.style.display = "none";
-    
+
     let facatContainer = document.createElement("div");
     facatContainer.setAttribute("class", "containerFacat");
     document.body.appendChild(facatContainer);

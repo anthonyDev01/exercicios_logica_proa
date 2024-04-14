@@ -314,6 +314,111 @@ const exerciciosFacat = [
             alert(`O jogo durou ${calcHora} horas.`);
         },
     },
+
+    {
+        nome: "jornade de trabalho",
+        exercicio: function ex24() {
+            let horasMes = parseInt(
+                prompt("Digite o numero de horas trabalhadas em um mês: ")
+            );
+            let salarioHora = parseInt(
+                prompt("Digite o valor da hora regular: ")
+            );
+            let jornadaMin = 40 * 4;
+            let salarioTotal = 0;
+
+            if (horasMes > jornadaMin) {
+                let horasExtras = horasMes - jornadaMin;
+                salarioTotal =
+                    salarioHora * jornadaMin +
+                    horasExtras * (salarioHora * 1.5);
+            } else salarioTotal = salarioHora * horasMes;
+
+            alert(`O valor do seu salaário é de R$ ${salarioTotal}.`);
+        },
+    },
+
+    {
+        nome: "peso ideal",
+        exercicio: function ex25() {
+            let nome = prompt("Digite o seu nome: ");
+            let sex = prompt("Digite o seu sexo (M/F): ");
+            let altura = parseFloat(
+                prompt("Digite o sua altura (use . no lugar da virgula): ")
+            );
+            let ideal = 0;
+
+            if (sex.toLocaleLowerCase() == "m") ideal = 72.7 * altura - 58;
+            else if (sex.toLocaleLowerCase() == "f")
+                ideal = 62.1 * altura - 44.7;
+            alert(`${nome}, o seu peso ideal é de ${ideal}kg.`);
+        },
+    },
+    {
+        nome: "salario total",
+        exercicio: function ex26() {
+            let salarioFixo = parseFloat(prompt("Digite seu salário fixo: "));
+            let totalVendas = parseFloat(
+                prompt("Digite o valor total de vendas: ")
+            );
+            let salarioTotal,
+                vendasExtras = 0;
+
+            if (totalVendas > 1500) {
+                vendasExtras = totalVendas - 1500;
+            }
+
+            if (totalVendas <= 1500)
+                salarioTotal = salarioFixo + totalVendas * 1.03;
+            else
+                salarioTotal =
+                    salarioFixo +
+                    (totalVendas - vendasExtras) * 1.03 +
+                    vendasExtras * 1.05;
+            alert(`Seu salário total é: ${salarioTotal}`);
+        },
+    },
+
+    {
+        nome: "saldo total",
+        exercicio: function ex27() {
+            let conta = parseInt(prompt("Digite o número da sua conta: "));
+            let saldo = parseFloat(prompt("Digite o valor do seu Saldo: "));
+            let debito = parseFloat(prompt("Digite o valor do seu Débito: "));
+            let credito = parseFloat(prompt("Digite o valor do seu Crédito: "));
+
+            let saldoAtual = saldo - debito + credito;
+            let isSaldo = "";
+
+            if (saldoAtual >= 0) isSaldo = "Saldo Positivo";
+            else isSaldo = "Saldo Negativo";
+            alert(
+                `Sua conta é a de número: ${conta} \nSeu saldo é: ${isSaldo}`
+            );
+        },
+    },
+
+    {
+        nome: "estoque",
+        exercicio: function ex28() {
+            let quantProdAtual = parseInt(
+                prompt("Digite a quantidade de produtos em estoque: ")
+            );
+            let quantMax = parseInt(
+                prompt("Digite a quantidade máxima que o estoque comporta: ")
+            );
+            let quantMin = parseInt(
+                prompt("Digite a quantidade mínima que o estoque precisa: ")
+            );
+
+            let quantMedia = (quantMax + quantMin) / 2;
+            let efetuar = "";
+
+            if (quantProdAtual >= quantMedia) efetuar = "Não efetuar compra";
+            else efetuar = "Efetuar compra";
+            alert(`A quantidade media de estoque é: ${quantMedia}\n${efetuar}`);
+        },
+    },
 ];
 
 export default exerciciosFacat;
