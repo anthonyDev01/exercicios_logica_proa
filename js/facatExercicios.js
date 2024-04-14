@@ -419,6 +419,115 @@ const exerciciosFacat = [
             alert(`A quantidade media de estoque é: ${quantMedia}\n${efetuar}`);
         },
     },
+
+    {
+        nome: "estoque",
+        exercicio: function ex28() {
+            let quantProdAtual = parseInt(
+                prompt("Digite a quantidade de produtos em estoque: ")
+            );
+            let quantMax = parseInt(
+                prompt("Digite a quantidade máxima que o estoque comporta: ")
+            );
+            let quantMin = parseInt(
+                prompt("Digite a quantidade mínima que o estoque precisa: ")
+            );
+
+            let quantMedia = (quantMax + quantMin) / 2;
+            let efetuar = "";
+
+            if (quantProdAtual >= quantMedia) efetuar = "Não efetuar compra";
+            else efetuar = "Efetuar compra";
+            alert(`A quantidade media de estoque é: ${quantMedia}\n${efetuar}`);
+        },
+    },
+
+    {
+        nome: "positivo, negativo ou zero",
+        exercicio: function ex29() {
+            let numero = parseInt(prompt("Digite um número: "));
+            let resultado = "";
+
+            if (numero > 0) resultado = "Positivo";
+            else if (numero == 0) resultado = "Zero";
+            else resultado = "Negativo";
+
+            alert(`O Número digitado é: ${resultado}`);
+        },
+    },
+
+    {
+        nome: "maior valor v2",
+        exercicio: function ex30() {
+            let numero1 = parseInt(prompt("Digite o primeiro número: "));
+            let numero2 = parseInt(prompt("Digite o segundo número: "));
+            let numero3 = parseInt(prompt("Digite o terceiro número: "));
+
+            if (numero1 > numero2) {
+                if (numero1 > numero3) alert(`O maior número é: ${numero1}`);
+                else alert(`O maior número é: ${numero3}`);
+            } else if (numero2 > numero3) alert(`O maior número é: ${numero2}`);
+            else alert(`O maior número é: ${numero3}`);
+        },
+    },
+
+    {
+        nome: "maior valor entre 3",
+        exercicio: function ex31() {
+            let numero1 = parseInt(prompt("Digite o primeiro número: "));
+            let numero2 = parseInt(prompt("Digite o segundo número: "));
+            let numero3 = parseInt(prompt("Digite o terceiro número: "));
+            let somados = 0;
+
+            if (numero1 > numero2) {
+                if (numero2 > numero3) somados = numero1 + numero2;
+                else somados = numero1 + numero3;
+            } else if (numero1 > numero3) somados = numero2 + numero1;
+            else somados = numero2 + numero3;
+
+            alert(`A soma dos 2 maiores números informados é: ${somados}`);
+        },
+    },
+
+    {
+        nome: "ordem crescente entre 3",
+        exercicio: function ex32() {
+            let numero1 = parseInt(prompt("Digite o primeiro número: "));
+            let numero2 = parseInt(prompt("Digite o segundo número: "));
+            let numero3 = parseInt(prompt("Digite o terceiro número: "));
+            let ordem = [];
+
+            if (numero1 > numero2) {
+                if (numero2 > numero3) ordem = [numero3, numero2, numero1];
+                else ordem = [numero2, numero3, numero1];
+            } else if (numero2 > numero3) {
+                if (numero3 > numero1) ordem = [numero1, numero3, numero2];
+                else ordem = [numero3, numero1, numero2];
+            } else {
+                if (numero1 > numero2) ordem = [numero2, numero1, numero3];
+                else ordem = [numero1, numero2, numero3];
+            }
+
+            alert(`Os número em ordem crescente: ${ordem}`);
+        },
+    },
+
+    {
+        nome: "é um triangulo?",
+        exercicio: function ex33() {
+            let numero1 = parseInt(prompt("Digite o primeiro número: "));
+            let numero2 = parseInt(prompt("Digite o segundo número: "));
+            let numero3 = parseInt(prompt("Digite o terceiro número: "));
+
+            if (
+                numero1 > numero2 + numero3 ||
+                numero2 > numero1 + numero3 ||
+                numero3 > numero1 + numero2
+            )
+                alert(`Os valores não forma um triângulo.`);
+            else alert(`Os valores formam um triângulo.`);
+        },
+    },
 ];
 
 export default exerciciosFacat;
