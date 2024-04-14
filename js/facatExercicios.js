@@ -229,6 +229,91 @@ const exerciciosFacat = [
             else alert("O número é Negativo!");
         },
     },
+
+    {
+        nome: "valor da maçã",
+        exercicio: function ex18() {
+            let quantidade = parseInt(prompt("Digite a quantidade de maçãs:"));
+
+            if (quantidade < 12) {
+                alert(`${quantidade} maçãs deream ${quantidade * 1.3}$`);
+            } else {
+                alert(`${quantidade} maçãs deream ${quantidade * 1.0}$`);
+            }
+        },
+    },
+
+    {
+        nome: "reprovado ou aprovado",
+        exercicio: function ex19() {
+            let quantidade = parseInt(prompt("Digite a quantidade de maçãs:"));
+
+            if (quantidade < 12) {
+                alert(`${quantidade} maçãs deream ${quantidade * 1.3}$`);
+            } else {
+                alert(`${quantidade} maçãs deream ${quantidade * 1.0}$`);
+            }
+        },
+    },
+    {
+        nome: "pode votar?",
+        exercicio: function ex20() {
+            let ano = parseInt(prompt("digite o ano que voçê nasceu:"));
+            let anoAtual = parseInt(prompt("digite o ano atual:"));
+
+            if (anoAtual - ano >= 16) {
+                alert("voce pode votar esse ano");
+            } else {
+                alert("voce nao pode votar");
+            }
+        },
+    },
+    {
+        nome: "maior e menor",
+        exercicio: function ex21() {
+            let numero1 = parseInt(prompt("Digite o primeiro numero"));
+            let numero2 = parseInt(prompt("Digite o segundo numero"));
+
+            if (numero1 > numero2) {
+                alert("o maior numero é ", numero1);
+            } else {
+                alert("o menor numero é ", numero2);
+            }
+        },
+    },
+    {
+        nome: "ordem crescente",
+        exercicio: function ex22() {
+            let numero1 = parseInt(prompt("Digite o primeiro numero"));
+            let numero2 = parseInt(prompt("Digite o segundo numero"));
+
+            if (numero1 > numero2) {
+                alert("os valores em ordem crescente é: ", numero1, numero2);
+            } else {
+                alert("os valores em ordem crescente é: ", numero2, numero1);
+            }
+        },
+    },
+    {
+        nome: "xadrez",
+        exercicio: function ex23() {
+            let horarioComeco = parseInt(
+                prompt("Digite o horário de começo da partida: ")
+            );
+            let horarioFim = parseInt(
+                prompt("Digite o horário de finalização da partida: ")
+            );
+
+            let calcHora = 0;
+
+            if (horarioComeco > horarioFim)
+                calcHora = 24 - horarioComeco + horarioFim;
+            else if (horarioComeco == horarioFim) calcHora = 12;
+            else calcHora = horarioFim - horarioComeco;
+
+            alert(`O jogo durou ${calcHora} horas.`);
+        },
+    },
 ];
 
 export default exerciciosFacat;
