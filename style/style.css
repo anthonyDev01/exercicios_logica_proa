@@ -49,7 +49,7 @@ button:after {
     transition-property: width, left;
 }
 
-.containerFacat {
+.containerExercice {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,6 +58,6 @@ button:after {
     width: 100%;
 }
 
-.containerFacat button{
+.containerExercice button{
     width: fit-content;
 }

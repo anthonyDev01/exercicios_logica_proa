@@ -5,42 +5,28 @@ let manzano = document.querySelector(".manzano");
 let faccat = document.querySelector(".facat");
 let container = document.querySelector(".container");
 
-manzano.addEventListener("click", openManzano);
-faccat.addEventListener("click", openFaccat);
+manzano.addEventListener("click", () => {
+    openExercice();
+    createExercice(exerciciosManzano);
+});
 
-function openFaccat() {
+faccat.addEventListener("click", () => {
+    openExercice();
+    createExercice(exerciciosFacat);
+});
+
+function openExercice() {
     container.style.display = "none";
 
     let facatContainer = document.createElement("div");
-    facatContainer.setAttribute("class", "containerFacat");
+    facatContainer.setAttribute("class", "containerExercice");
     document.body.appendChild(facatContainer);
-    createExerciceFact();
 }
 
-function openManzano() {
-    container.style.display = "none";
+function createExercice(listaExercicios) {
+    let facatContainer = document.querySelector(".containerExercice");
 
-    let facatContainer = document.createElement("div");
-    facatContainer.setAttribute("class", "containerFacat");
-    document.body.appendChild(facatContainer);
-    createExerciceManzano();
-}
-
-function createExerciceFact() {
-    let facatContainer = document.querySelector(".containerFacat");
-
-    exerciciosFacat.forEach((exercicio) => {
-        let buttonExecice = document.createElement("button");
-        buttonExecice.innerHTML = `Exercicio ${exercicio.nome}`;
-        buttonExecice.addEventListener("click", exercicio.exercicio);
-        facatContainer.appendChild(buttonExecice);
-    });
-}
-
-function createExerciceManzano() {
-    let facatContainer = document.querySelector(".containerFacat");
-
-    exerciciosManzano.forEach((exercicio) => {
+    listaExercicios.forEach((exercicio) => {
         let buttonExecice = document.createElement("button");
         buttonExecice.innerHTML = `Exercicio ${exercicio.nome}`;
         buttonExecice.addEventListener("click", exercicio.exercicio);
