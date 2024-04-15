@@ -10,7 +10,7 @@ const exerciciosManzano = [
         },
     },
     {
-        nome: "Converter temperatura (Fahrenheit para Celsius)",
+        nome: "Converter temperatura ",
         exercicio: function ex2() {
             let grausF = parseFloat(
                 prompt("Digite a temperatura em Fahrenheit: ")
@@ -473,4 +473,601 @@ const exerciciosManzano = [
             );
         },
     },
+
+    {
+        nome: "Potência de um número",
+        exercicio: function ex31() {
+            alert(`Você escolheu o ${addTextoBtn[30]}! Clique para continuar.`);
+
+            let valor = parseInt(prompt("Digite a Base: "));
+            let expoente = parseInt(prompt("Digite o Expoente: "));
+
+            let count = 0;
+            let elevado = 1;
+
+            console.clear();
+            while (count <= expoente) {
+                if (count === 0) {
+                    elevado = 1;
+                } else {
+                    elevado *= valor;
+                }
+                console.log(`${valor} elevado a ${count}: ${elevado}`);
+                count++;
+            }
+
+            alert(
+                "Entre nas ferramentas de desenvolvedor para ver o resultado"
+            );
+        },
+    },
+    {
+        nome: "Sequência de Fibonacci",
+        exercicio: function ex32() {
+            alert(`Você escolheu o ${addTextoBtn[31]}! Clique para continuar.`);
+
+            let n1 = 0,
+                n2 = 1,
+                count = 0,
+                nth;
+
+            console.clear();
+            while (count < 15) {
+                if (count === 0) {
+                    nth = 0;
+                } else if (count === 1) {
+                    nth = 1;
+                } else {
+                    nth = n1 + n2;
+                    n1 = n2;
+                    n2 = nth;
+                }
+                console.log(`Passo ${count + 1}º: ${nth}`);
+                count++;
+            }
+
+            alert(
+                "Entre nas ferramentas de desenvolvedor para ver o resultado"
+            );
+        },
+    },
+    {
+        nome: "Conversão de temperatura",
+        exercicio: function ex33() {
+            alert(`Você escolheu o ${addTextoBtn[32]}! Clique para continuar.`);
+
+            let gCelsius = 10;
+            let count = 0;
+
+            console.clear();
+            while (count < 10) {
+                let gFahren = (9 * gCelsius + 160) / 5;
+                console.log(`${gCelsius}º em Fahrenheit: ${gFahren}`);
+
+                gCelsius += 10;
+                count++;
+            }
+            alert(
+                "Entre nas ferramentas de desenvolvedor para ver o resultado"
+            );
+        },
+    },
+    {
+        nome: "Média de 10 valores",
+        exercicio: function ex34() {
+            alert(`Você escolheu o ${addTextoBtn[33]}! Clique para continuar.`);
+
+            let valor,
+                somatoria = 0,
+                count = 1;
+
+            while (count <= 10) {
+                valor = parseFloat(prompt(`Digite o ${count}º valor:`));
+                somatoria += valor;
+                count++;
+            }
+
+            alert(
+                `A média da soma de todos os valores passados: ${
+                    somatoria / 10
+                }`
+            );
+        },
+    },
+    {
+        nome: "Soma de números pares",
+        exercicio: function ex35() {
+            alert(`Você escolheu o ${addTextoBtn[34]}! Clique para continuar.`);
+
+            let ehPar = 0;
+            let auxiliar = 0;
+            let media;
+            let count = 50;
+
+            console.clear();
+            while (count <= 70) {
+                if (count % 2 === 0) {
+                    ehPar += count;
+                    console.log(`${ehPar} + ${count} = ${ehPar + count}`);
+                    auxiliar++;
+                }
+                count++;
+            }
+
+            media = ehPar / auxiliar;
+            alert(
+                `A média da soma dos números pares (entre 50 e 70) é: ${media}`
+            );
+        },
+    },
+    {
+        nome: "Cálculo de área de cômodos",
+        exercicio: function ex36() {
+            alert(`Você escolheu o ${addTextoBtn[35]}! Clique para continuar.`);
+
+            let count = 0;
+            let area,
+                largura,
+                comprimento,
+                totalArea = 0;
+            let vaiContinuar = "s";
+
+            const comodos = [];
+            const areas = [];
+
+            alert("Bem-vindo à sua calculadora de cômodos!");
+
+            console.clear();
+            while (vaiContinuar.toLowerCase() === "s") {
+                comodos[count] = prompt("Qual o nome do Cômodo:");
+
+                comprimento = parseFloat(
+                    prompt(`Qual o comprimento do(a) ${comodos[count]}:`)
+                );
+                largura = parseFloat(
+                    prompt(`Qual a largura do(a) ${comodos[count]}:`)
+                );
+
+                area = largura * comprimento;
+                areas[count] = area;
+                totalArea += area;
+
+                alert(`Área do cômodo ${comodos[count]}: ${areas[count]}`);
+
+                count++;
+
+                vaiContinuar = prompt("Deseja adicionar outro cômodo? (s/n): ");
+
+                if (vaiContinuar.toLowerCase() === "n") {
+                    break;
+                }
+            }
+
+            count = 0;
+            while (count < 10) {
+                if (comodos[count] && areas[count] > 0) {
+                    console.log(
+                        `O cômodo ${comodos[count]} tem ${areas[count]} de área.`
+                    );
+                }
+                count++;
+            }
+
+            alert(
+                `Área total da casa: ${totalArea}\nPara ver todos os comodos, acesse a ferramenta de desenvolvedor.`
+            );
+        },
+    },
+    {
+        nome: "Maior e menor valor digitado",
+        exercicio: function ex37() {
+            alert(`Você escolheu o ${addTextoBtn[36]}! Clique para continuar.`);
+
+            let menor,
+                maior,
+                valor,
+                count = 0;
+            let continuar = "s";
+
+            alert(
+                "Você pode digitar quantos valores quiser.\nMas valores negativos encerram!"
+            );
+
+            while (continuar.toLowerCase() === "s") {
+                valor = parseInt(prompt("Digite o valor: "));
+
+                if (count === 0) {
+                    maior = valor;
+                    menor = valor;
+                } else {
+                    if (valor < 0) {
+                        alert("Valor negativo! O programa irá encerrar");
+                        continuar = "n";
+                    } else {
+                        if (valor > maior) maior = valor;
+                        if (valor < menor) menor = valor;
+                    }
+                }
+                count++;
+            }
+
+            alert(
+                `O menor valor foi: ${menor}\nO maior valor foi: ${maior}\nÚltimo valor digitado: ${valor}`
+            );
+        },
+    },
+
+    {
+        nome: "Quadrados de números de 15 a 200",
+        exercicio: function ex38() {
+            alert(`Você escolheu o ${addTextoBtn[37]}! Clique para continuar.`);
+
+            let contadora;
+            contadora = 15;
+
+            console.clear();
+            do {
+                console.log(
+                    `O número ${contadora} ao quadrado é: ${contadora ** 2}`
+                );
+                contadora++;
+            } while (contadora <= 200);
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Soma dos números pares de 1 a 500",
+        exercicio: function ex39() {
+            alert(`Você escolheu o ${addTextoBtn[38]}! Clique para continuar.`);
+
+            let contadora = 1;
+            let somados = 0;
+
+            do {
+                if (contadora % 2 === 0) somados += contadora;
+                contadora++;
+            } while (contadora <= 500);
+
+            alert(`O valor da soma dos pares de 1 a 500 é: ${somados}`);
+        },
+    },
+    {
+        nome: "Divisíveis por 4 de 1 a 200",
+        exercicio: function ex40() {
+            alert(`Você escolheu o ${addTextoBtn[39]}! Clique para continuar.`);
+
+            let count = 0;
+
+            console.clear();
+            do {
+                count++;
+                if (count % 4 === 0)
+                    console.log(`O número ${count} é divisível por 4`);
+            } while (count <= 200);
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Soma dos números de grãos de xadrez",
+        exercicio: function ex41() {
+            alert(`Você escolheu o ${addTextoBtn[40]}! Clique para continuar.`);
+
+            let count = 0;
+            let atual = 0;
+
+            do {
+                atual += 2 ** count;
+                count++;
+            } while (count <= 64);
+
+            alert("(Considere o enunciado da questão...)");
+            alert(
+                `A soma dos números de grãos em um tabuleiro de xadrez é: ${atual}`
+            );
+        },
+    },
+    {
+        nome: "Soma dos fatoriais",
+        exercicio: function ex42() {
+            alert(`Você escolheu o ${addTextoBtn[41]}! Clique para continuar.`);
+
+            let count = 0;
+            let valor,
+                somatorio = 0,
+                fatorial;
+
+            do {
+                count++;
+                valor = parseInt(prompt(`Digite o ${count} valor:`));
+
+                fatorial = valor;
+                do {
+                    valor--;
+                    fatorial *= valor;
+                } while (valor > 1);
+
+                somatorio += fatorial;
+            } while (count < 15);
+
+            alert(
+                `O somatório de todos os fatoriais dos números solicitados é: ${somatorio}`
+            );
+        },
+    },
+    {
+        nome: "Soma e média de valores (com parada por valor negativo)",
+        exercicio: function ex43() {
+            alert(`Você escolheu o ${addTextoBtn[42]}! Clique para continuar.`);
+
+            let count = 1;
+            let valor,
+                somatorio = 0,
+                media;
+
+            alert(
+                "Você poderá digitar quantos valores quiser, mas se for negativo, o programa encerra."
+            );
+
+            do {
+                valor = parseFloat(prompt(`Digite o ${count}º valor:`));
+
+                somatorio += valor;
+
+                if (valor < 0)
+                    alert("Valor digitado é negativo. Encerrando o programa.");
+                else count++;
+            } while (valor >= 0);
+
+            if (valor < 0) media = somatorio / (count - 1);
+
+            alert(
+                `Soma de todos os valores: ${somatorio}\nMédia da soma: ${media}\nQuantidade de elementos: ${
+                    count - 1
+                }`
+            );
+        },
+    },
+    {
+        nome: "Fatorial de números ímpares",
+        exercicio: function ex44() {
+            alert(`Você escolheu o ${addTextoBtn[43]}! Clique para continuar.`);
+
+            let count = 1;
+            let fatorial = 1;
+
+            do {
+                if (count % 2 === 1) fatorial *= count;
+                count++;
+            } while (count <= 10);
+
+            alert(`Fatorial dos números ímpares entre 1 e 10: ${fatorial}`);
+        },
+    },
+    {
+        nome: "Cálculo de área de cômodos com repetição controlada por flag",
+        exercicio: function ex45() {
+            alert(`Você escolheu o ${addTextoBtn[44]}! Clique para continuar.`);
+
+            let count = 1;
+            let area = 0,
+                largura = 0,
+                comprimento = 0,
+                totalArea = 0;
+            let vaiContinuar = "";
+            let comodos = [];
+            let areas = [];
+
+            alert("Bem vindo a sua calculadora de cômodos!");
+
+            console.clear();
+            do {
+                comodos[count] = prompt(`Qual o nome do Cômodo:`);
+
+                comprimento = parseFloat(
+                    prompt(`Qual o comprimento do(a) ${comodos[count]}:`)
+                );
+                largura = parseFloat(
+                    prompt(`Qual a largura do(a) ${comodos[count]}:`)
+                );
+
+                area = largura * comprimento;
+                areas[count] = area;
+                totalArea += area;
+
+                alert(`Área do cômodo ${comodos[count]}: ${areas[count]}`);
+
+                count++;
+
+                vaiContinuar = prompt("Deseja adicionar outro cômodo? (s/n):");
+                if (vaiContinuar.toLowerCase() === "n") {
+                    break;
+                }
+            } while (vaiContinuar === "s");
+
+            count = 1;
+            do {
+                if (comodos[count] !== "" && areas[count] > 0) {
+                    console.log(
+                        `Cômodo ${comodos[count]} tem ${areas[count]} de área`
+                    );
+                }
+                count++;
+            } while (count <= 10);
+
+            alert(`Área total da Casa: ${totalArea}`);
+            alert("Confira os comodos na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Divisão inteira",
+        exercicio: function ex46() {
+            alert(`Você escolheu o ${addTextoBtn[45]}! Clique para continuar.`);
+
+            let divisor = 0,
+                dividendo = 0,
+                count = 0;
+            let continuar = "";
+
+            dividendo = parseInt(prompt("Digite o dividendo:"));
+            divisor = parseInt(prompt("Digite o divisor:"));
+
+            do {
+                if (dividendo >= divisor) {
+                    dividendo -= divisor;
+                    count++;
+                } else continuar = "n";
+            } while (continuar !== "n");
+
+            alert(`A parte inteira da divisão é: ${count}`);
+        },
+    },
+
+    {
+        nome: "Quadrados de números de 15 a 200 (com for loop)",
+        exercicio: function ex47() {
+            alert(`Você escolheu o ${addTextoBtn[46]}! Clique para continuar.`);
+
+            console.clear();
+            for (let contadora = 15; contadora <= 200; contadora++) {
+                console.log(
+                    `O número ${contadora} ao quadrado é: ${contadora ** 2}`
+                );
+            }
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Tabuada personalizada",
+        exercicio: function ex48() {
+            alert(`Você escolheu o ${addTextoBtn[47]}! Clique para continuar.`);
+
+            let num = parseInt(prompt("Digite um número:"));
+
+            console.clear();
+            for (let count = 1; count <= 10; count++) {
+                console.log(`${num} x ${count} = ${num * count}`);
+            }
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Soma dos números de 1 a 100",
+        exercicio: function ex49() {
+            alert(`Você escolheu o ${addTextoBtn[48]}! Clique para continuar.`);
+
+            let somados = 0;
+
+            for (let count = 1; count <= 100; count++) somados += count;
+
+            alert(`O Somatório dos números de 1 a 100: ${somados}`);
+        },
+    },
+    {
+        nome: "Soma dos pares de 1 a 500",
+        exercicio: function ex50() {
+            alert(`Você escolheu o ${addTextoBtn[49]}! Clique para continuar.`);
+
+            let somados = 0;
+
+            for (let count = 1; count <= 500; count++) {
+                if (count % 2 === 0) somados += count;
+            }
+
+            alert(`O Somatório dos pares de 1 a 500: ${somados}`);
+        },
+    },
+    {
+        nome: "Identificação de números ímpares",
+        exercicio: function ex51() {
+            alert(`Você escolheu o ${addTextoBtn[50]}! Clique para continuar.`);
+
+            console.clear();
+            for (let count = 0; count <= 20; count++) {
+                if (count % 2 === 1) console.log(`O número ${count} é ímpar.`);
+            }
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Identificação de números divisíveis por 4",
+        exercicio: function ex52() {
+            alert(`Você escolheu o ${addTextoBtn[51]}! Clique para continuar.`);
+
+            console.clear();
+            for (let count = 1; count <= 200; count++) {
+                if (count % 4 === 0)
+                    console.log(`O número ${count} é divisível por 4.`);
+            }
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Potências de 3",
+        exercicio: function ex53() {
+            alert(`Você escolheu o ${addTextoBtn[52]}! Clique para continuar.`);
+
+            let base = 3;
+            let calc;
+
+            console.clear();
+            for (let count = 0; count <= 15; count++) {
+                if (count === 0) calc = 1;
+                else {
+                    calc *= base;
+                    console.log(`${base} ^ ${count} = ${calc}`);
+                }
+            }
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Potências personalizadas",
+        exercicio: function ex54() {
+            alert(`Você escolheu o ${addTextoBtn[53]}! Clique para continuar.`);
+
+            let calc;
+            let base = parseInt(prompt("Digite a base:"));
+            let expoente = parseInt(prompt("Digite o expoente:"));
+
+            console.clear();
+            for (let count = 0; count <= expoente; count++) {
+                if (count === 0) calc = 1;
+                else calc *= base;
+                console.log(`${base} ^ ${count} = ${calc}`);
+            }
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
+    {
+        nome: "Termos de Fibonacci",
+        exercicio: function ex55() {
+            alert(`Você escolheu o ${addTextoBtn[54]}! Clique para continuar.`);
+            let n1 = 1;
+            let n2 = 1;
+            let nth;
+
+            console.clear();
+            for (let count = 0; count <= 15; count++) {
+                if (count === 0 || count === 1) nth = 1;
+                else {
+                    nth = n1 + n2;
+                    n1 = n2;
+                    n2 = nth;
+                }
+                console.log(`${count}º termo de Fibonacci: ${nth}`);
+            }
+
+            alert("Confira os resultados na ferramenta de desenvolvedor.");
+        },
+    },
 ];
+
+export default exerciciosManzano;
