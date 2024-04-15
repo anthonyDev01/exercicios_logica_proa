@@ -472,8 +472,6 @@ const exerciciosFacat = [
     {
         nome: "Verificar vencedor",
         exercicio: function ex34() {
-     
-
             let time1 = prompt("Digite o nome do primeiro time: ");
             let time2 = prompt("Digite o nome do segundo time: ");
 
@@ -496,8 +494,6 @@ const exerciciosFacat = [
     {
         nome: "Comparar números",
         exercicio: function ex35() {
-    
-
             let numero1 = parseInt(prompt("Digite um número: "));
             let numero2 = parseInt(prompt("Digite outro número: "));
 
@@ -514,8 +510,6 @@ const exerciciosFacat = [
     {
         nome: "Calcular preço do combustível",
         exercicio: function ex36() {
-          
-
             alert(
                 `Bem vindo ao posto de gasolina da Faccat\nÁlcool: R$2.90 / Gasolina: R$3.30`
             );
@@ -549,8 +543,6 @@ const exerciciosFacat = [
     {
         nome: "Calcular soma e produto de idades",
         exercicio: function ex37() {
-           
-
             let idadeHomem1 = parseInt(
                 prompt("Digite a idade do primeiro homem: ")
             );
@@ -595,8 +587,6 @@ const exerciciosFacat = [
     {
         nome: "Calcular preço das frutas",
         exercicio: function ex38() {
-      
-
             alert(
                 `A maçã custa R$1.80 até 5kg, e R$1.50 acima disso\nE morangos custam R$2.50 até 5kg, e R$2.20 acima disso.\nTemos também 10% de desconto se sua compra ultrapassar 8kg ou R$25.`
             );
@@ -624,8 +614,6 @@ const exerciciosFacat = [
     {
         nome: "Verificar usuário e senha",
         exercicio: function ex39() {
-     
-
             let login, senha, tentaLogin, tentaSenha;
 
             login = 1234;
@@ -646,7 +634,6 @@ const exerciciosFacat = [
     {
         nome: "Calcular preço do produto com desconto",
         exercicio: function ex40() {
-
             let nomeProd, quantidade, precoUni, total, desconto;
 
             nomeProd = prompt("Digite o nome do produto: ");
@@ -673,8 +660,6 @@ const exerciciosFacat = [
     {
         nome: "Calcular aproveitamento do aluno",
         exercicio: function ex41() {
-           
-
             let nota1, nota2, nota3, mediaExercicios, mediaFinal, notaMedia;
 
             nota1 = parseFloat(prompt("Digite a Primeira Nota: "));
@@ -697,8 +682,6 @@ const exerciciosFacat = [
     {
         nome: "Verificar aposentadoria do empregado",
         exercicio: function ex42() {
-     
-
             let vaiAposentar = "";
             let anoAtual = Date().getFullYear();
 
@@ -729,8 +712,6 @@ const exerciciosFacat = [
     {
         nome: "Ler valores e fazer divisão",
         exercicio: function ex43() {
-          
-
             let num1, num2;
 
             num1 = parseInt(prompt("Digite o Primeiro valor: "));
@@ -746,8 +727,6 @@ const exerciciosFacat = [
     {
         nome: "Ler valores e fazer divisão (ENQUANTO)",
         exercicio: function ex44() {
-            
-
             let num1,
                 num2 = 0;
             num1 = parseInt(prompt("Digite o Primeiro valor: "));
@@ -763,8 +742,6 @@ const exerciciosFacat = [
     {
         nome: "Ler valores e fazer divisão (DO-WHILE)",
         exercicio: function ex45() {
-            
-
             let num1, num2;
 
             num1 = parseInt(prompt("Digite o Primeiro valor: "));
@@ -780,8 +757,6 @@ const exerciciosFacat = [
     {
         nome: "Ler valores e fazer divisão com mensagem de erro",
         exercicio: function ex46() {
-           
-
             let num1,
                 num2 = 0;
 
@@ -797,8 +772,6 @@ const exerciciosFacat = [
     {
         nome: "Calcular média de notas",
         exercicio: function ex47() {
-           
-
             let nota1, nota2, media;
             nota1 = -1;
 
@@ -820,8 +793,6 @@ const exerciciosFacat = [
     {
         nome: "Calcular média de notas com opção de novo cálculo",
         exercicio: function ex48() {
-          
-
             let nota1, nota2, media, novoCalc;
 
             do {

@@ -383,7 +383,7 @@ const exerciciosManzano = [
             else alert("Opção inválida");
         },
     },
-    // Exercícios 26 a 30
+
     {
         nome: "Tabuada de um número",
         exercicio: function ex26() {
@@ -477,8 +477,6 @@ const exerciciosManzano = [
     {
         nome: "Potência de um número",
         exercicio: function ex31() {
-            alert(`Você escolheu o ${addTextoBtn[30]}! Clique para continuar.`);
-
             let valor = parseInt(prompt("Digite a Base: "));
             let expoente = parseInt(prompt("Digite o Expoente: "));
 
@@ -504,8 +502,6 @@ const exerciciosManzano = [
     {
         nome: "Sequência de Fibonacci",
         exercicio: function ex32() {
-            alert(`Você escolheu o ${addTextoBtn[31]}! Clique para continuar.`);
-
             let n1 = 0,
                 n2 = 1,
                 count = 0,
@@ -534,8 +530,6 @@ const exerciciosManzano = [
     {
         nome: "Conversão de temperatura",
         exercicio: function ex33() {
-            alert(`Você escolheu o ${addTextoBtn[32]}! Clique para continuar.`);
-
             let gCelsius = 10;
             let count = 0;
 
@@ -555,8 +549,6 @@ const exerciciosManzano = [
     {
         nome: "Média de 10 valores",
         exercicio: function ex34() {
-            alert(`Você escolheu o ${addTextoBtn[33]}! Clique para continuar.`);
-
             let valor,
                 somatoria = 0,
                 count = 1;
@@ -577,8 +569,6 @@ const exerciciosManzano = [
     {
         nome: "Soma de números pares",
         exercicio: function ex35() {
-            alert(`Você escolheu o ${addTextoBtn[34]}! Clique para continuar.`);
-
             let ehPar = 0;
             let auxiliar = 0;
             let media;
@@ -603,8 +593,6 @@ const exerciciosManzano = [
     {
         nome: "Cálculo de área de cômodos",
         exercicio: function ex36() {
-            alert(`Você escolheu o ${addTextoBtn[35]}! Clique para continuar.`);
-
             let count = 0;
             let area,
                 largura,
@@ -661,8 +649,6 @@ const exerciciosManzano = [
     {
         nome: "Maior e menor valor digitado",
         exercicio: function ex37() {
-            alert(`Você escolheu o ${addTextoBtn[36]}! Clique para continuar.`);
-
             let menor,
                 maior,
                 valor,
@@ -700,8 +686,6 @@ const exerciciosManzano = [
     {
         nome: "Quadrados de números de 15 a 200",
         exercicio: function ex38() {
-            alert(`Você escolheu o ${addTextoBtn[37]}! Clique para continuar.`);
-
             let contadora;
             contadora = 15;
 
@@ -719,8 +703,6 @@ const exerciciosManzano = [
     {
         nome: "Soma dos números pares de 1 a 500",
         exercicio: function ex39() {
-            alert(`Você escolheu o ${addTextoBtn[38]}! Clique para continuar.`);
-
             let contadora = 1;
             let somados = 0;
 
@@ -735,8 +717,6 @@ const exerciciosManzano = [
     {
         nome: "Divisíveis por 4 de 1 a 200",
         exercicio: function ex40() {
-            alert(`Você escolheu o ${addTextoBtn[39]}! Clique para continuar.`);
-
             let count = 0;
 
             console.clear();
@@ -752,8 +732,6 @@ const exerciciosManzano = [
     {
         nome: "Soma dos números de grãos de xadrez",
         exercicio: function ex41() {
-            alert(`Você escolheu o ${addTextoBtn[40]}! Clique para continuar.`);
-
             let count = 0;
             let atual = 0;
 
@@ -771,8 +749,6 @@ const exerciciosManzano = [
     {
         nome: "Soma dos fatoriais",
         exercicio: function ex42() {
-            alert(`Você escolheu o ${addTextoBtn[41]}! Clique para continuar.`);
-
             let count = 0;
             let valor,
                 somatorio = 0,
@@ -799,8 +775,6 @@ const exerciciosManzano = [
     {
         nome: "Soma e média de valores (com parada por valor negativo)",
         exercicio: function ex43() {
-            alert(`Você escolheu o ${addTextoBtn[42]}! Clique para continuar.`);
-
             let count = 1;
             let valor,
                 somatorio = 0,
@@ -832,8 +806,6 @@ const exerciciosManzano = [
     {
         nome: "Fatorial de números ímpares",
         exercicio: function ex44() {
-            alert(`Você escolheu o ${addTextoBtn[43]}! Clique para continuar.`);
-
             let count = 1;
             let fatorial = 1;
 
@@ -848,8 +820,6 @@ const exerciciosManzano = [
     {
         nome: "Cálculo de área de cômodos com repetição controlada por flag",
         exercicio: function ex45() {
-            alert(`Você escolheu o ${addTextoBtn[44]}! Clique para continuar.`);
-
             let count = 1;
             let area = 0,
                 largura = 0,
@@ -903,8 +873,6 @@ const exerciciosManzano = [
     {
         nome: "Divisão inteira",
         exercicio: function ex46() {
-            alert(`Você escolheu o ${addTextoBtn[45]}! Clique para continuar.`);
-
             let divisor = 0,
                 dividendo = 0,
                 count = 0;
@@ -927,8 +895,6 @@ const exerciciosManzano = [
     {
         nome: "Quadrados de números de 15 a 200 (com for loop)",
         exercicio: function ex47() {
-            alert(`Você escolheu o ${addTextoBtn[46]}! Clique para continuar.`);
-
             console.clear();
             for (let contadora = 15; contadora <= 200; contadora++) {
                 console.log(
@@ -942,8 +908,6 @@ const exerciciosManzano = [
     {
         nome: "Tabuada personalizada",
         exercicio: function ex48() {
-            alert(`Você escolheu o ${addTextoBtn[47]}! Clique para continuar.`);
-
             let num = parseInt(prompt("Digite um número:"));
 
             console.clear();
@@ -957,8 +921,6 @@ const exerciciosManzano = [
     {
         nome: "Soma dos números de 1 a 100",
         exercicio: function ex49() {
-            alert(`Você escolheu o ${addTextoBtn[48]}! Clique para continuar.`);
-
             let somados = 0;
 
             for (let count = 1; count <= 100; count++) somados += count;
@@ -969,8 +931,6 @@ const exerciciosManzano = [
     {
         nome: "Soma dos pares de 1 a 500",
         exercicio: function ex50() {
-            alert(`Você escolheu o ${addTextoBtn[49]}! Clique para continuar.`);
-
             let somados = 0;
 
             for (let count = 1; count <= 500; count++) {
@@ -983,8 +943,6 @@ const exerciciosManzano = [
     {
         nome: "Identificação de números ímpares",
         exercicio: function ex51() {
-            alert(`Você escolheu o ${addTextoBtn[50]}! Clique para continuar.`);
-
             console.clear();
             for (let count = 0; count <= 20; count++) {
                 if (count % 2 === 1) console.log(`O número ${count} é ímpar.`);
@@ -996,8 +954,6 @@ const exerciciosManzano = [
     {
         nome: "Identificação de números divisíveis por 4",
         exercicio: function ex52() {
-            alert(`Você escolheu o ${addTextoBtn[51]}! Clique para continuar.`);
-
             console.clear();
             for (let count = 1; count <= 200; count++) {
                 if (count % 4 === 0)
@@ -1010,8 +966,6 @@ const exerciciosManzano = [
     {
         nome: "Potências de 3",
         exercicio: function ex53() {
-            alert(`Você escolheu o ${addTextoBtn[52]}! Clique para continuar.`);
-
             let base = 3;
             let calc;
 
@@ -1030,8 +984,6 @@ const exerciciosManzano = [
     {
         nome: "Potências personalizadas",
         exercicio: function ex54() {
-            alert(`Você escolheu o ${addTextoBtn[53]}! Clique para continuar.`);
-
             let calc;
             let base = parseInt(prompt("Digite a base:"));
             let expoente = parseInt(prompt("Digite o expoente:"));
@@ -1049,7 +1001,6 @@ const exerciciosManzano = [
     {
         nome: "Termos de Fibonacci",
         exercicio: function ex55() {
-            alert(`Você escolheu o ${addTextoBtn[54]}! Clique para continuar.`);
             let n1 = 1;
             let n2 = 1;
             let nth;
