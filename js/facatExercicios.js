@@ -350,12 +350,12 @@ const exerciciosFacat = [
             let credito = parseFloat(prompt("Digite o valor do seu Crédito: "));
 
             let saldoAtual = saldo - debito + credito;
-            let isSaldo = "";
+            let resultado = "";
 
-            if (saldoAtual >= 0) isSaldo = "Saldo Positivo";
-            else isSaldo = "Saldo Negativo";
+            if (saldoAtual >= 0) resultado = "Saldo Positivo";
+            else resultado = "Saldo Negativo";
             alert(
-                `Sua conta é a de número: ${conta} \nSeu saldo é: ${isSaldo}`
+                `Sua conta é a de número: ${conta} Seu saldo é: ${resultado}`
             );
         },
     },
@@ -417,14 +417,14 @@ const exerciciosFacat = [
             let numero1 = parseInt(prompt("Digite o primeiro número: "));
             let numero2 = parseInt(prompt("Digite o segundo número: "));
             let numero3 = parseInt(prompt("Digite o terceiro número: "));
-            let somados = 0;
 
-            if (numero1 > numero2) {
-                if (numero2 > numero3) somados = numero1 + numero2;
-                else somados = numero1 + numero3;
-            } else if (numero1 > numero3) somados = numero2 + numero1;
-            else somados = numero2 + numero3;
+            let maior1 = Math.max(numero1, numero2, numero3);
+            let maior2 =
+                numero1 !== maior1
+                    ? Math.max(numero1, numero2)
+                    : Math.max(numero2, numero3);
 
+            let somados = maior1 + maior2;
             alert(`A soma dos 2 maiores números informados é: ${somados}`);
         },
     },
@@ -435,20 +435,11 @@ const exerciciosFacat = [
             let numero1 = parseInt(prompt("Digite o primeiro número: "));
             let numero2 = parseInt(prompt("Digite o segundo número: "));
             let numero3 = parseInt(prompt("Digite o terceiro número: "));
-            let ordem = [];
 
-            if (numero1 > numero2) {
-                if (numero2 > numero3) ordem = [numero3, numero2, numero1];
-                else ordem = [numero2, numero3, numero1];
-            } else if (numero2 > numero3) {
-                if (numero3 > numero1) ordem = [numero1, numero3, numero2];
-                else ordem = [numero3, numero1, numero2];
-            } else {
-                if (numero1 > numero2) ordem = [numero2, numero1, numero3];
-                else ordem = [numero1, numero2, numero3];
-            }
+            let ordem = [numero1, numero2, numero3];
+            ordem.sort((a, b) => a - b);
 
-            alert(`Os número em ordem crescente: ${ordem}`);
+            alert(`Os números em ordem crescente: ${ordem}`);
         },
     },
 
