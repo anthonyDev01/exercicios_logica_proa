@@ -1,3 +1,9 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -5,14 +11,7 @@
     justify-content: center;
 }
 
-body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .containerExercice {
-    display: grid;
     grid-template-columns: 200px 200px;
     grid-column: 30px;
 }
@@ -24,6 +23,24 @@ body {
 
 .exercicio {
     margin-right: 2rem;
+}
+
+.button-back {
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+
+    background: #e8e8e8;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
 }
 
 button {

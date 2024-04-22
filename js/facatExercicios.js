@@ -727,7 +727,7 @@ const exerciciosFacat = [
                 num2 = parseInt(prompt("Digite o Segundo valor: "));
             }
 
-            alert(`${num1} ${num2}`);
+            alert(`${num1} / ${num2} = ${num1 / num2}`);
         },
     },
     {
